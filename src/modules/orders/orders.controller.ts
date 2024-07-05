@@ -1,10 +1,16 @@
 import { Request, Response } from 'express';
 import { OrderService } from './orders.service';
+import { OrderValidation } from './orders.validation';
 
 const createOrder = async (req: Request, res: Response) => {
+   const order = req.body;
+
    try {
-      const response = await OrderService.createOrder(req.body);
-      res.status(201).json({
+      const zodParsedOrder = OrderValidation.OrderCreateSchema.parse(order);
+
+      const response = await OrderService.createOrder(zodParsedOrder);
+
+      res.status(200).json({
          success: true,
          message: 'Order created successfully',
          data: response,
@@ -13,7 +19,7 @@ const createOrder = async (req: Request, res: Response) => {
       res.status(500).json({
          success: false,
          message: 'Order creation failed',
-         error: error?.message || error || 'Something went wrong',
+         error: error?.errors ? error : error.message || 'Something went wrong',
       });
    }
 };
