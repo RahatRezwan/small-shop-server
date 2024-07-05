@@ -19,7 +19,3 @@ export type IProduct = {
    variants: IVariant[];
    inventory: IInventory;
 };
-
-export type ProductModel = {
-   isProductExists(id: string): Promise<IProduct>;
-} & Model<IProduct>;
