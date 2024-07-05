@@ -6,8 +6,18 @@ const createProduct = async (product: IProduct) => {
    return result;
 };
 
-const getAllProducts = async () => {
-   const result = await productsModel.find();
+const getAllProducts = async (searchTerm: string) => {
+   let query = {};
+   if (searchTerm) {
+      query = {
+         $or: [
+            { name: { $regex: searchTerm, $options: 'i' } },
+            { description: { $regex: searchTerm, $options: 'i' } },
+            { category: { $regex: searchTerm, $options: 'i' } },
+         ],
+      };
+   }
+   const result = await productsModel.find(query);
    return result;
 };
 
