@@ -7,7 +7,7 @@ const VariantSchema = new Schema<IVariant>({
       required: [true, 'Variant type is required'],
    },
    value: {
-      type: Schema.Types.Mixed,
+      type: String,
       required: [true, 'Variant value is required'],
    },
 });
