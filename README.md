@@ -39,7 +39,7 @@
       DB_PASSWORD=your_db_password
       DATABASE_URL= Your_mongoose_connection_url
       ```
-   -  You can also use env.example file for run this project. Just rename the file to .env
+   -  You can also use `env.example` file for run this project. Just rename the file to .env
 
 5. **Run the Project**
 
