@@ -1,6 +1,3 @@
-I apologize for the oversight. Here is the correct markdown code for the README file:
-
-````markdown
 # Small Shop Server API
 
 ## GitHub Repository
@@ -14,10 +11,10 @@ I apologize for the oversight. Here is the correct markdown code for the README 
 ## Setup Instructions
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/RahatRezwan/small-shop-server
    ```
-````
 
 2. **Navigate to the Project Directory**
 
