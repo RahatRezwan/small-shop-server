@@ -13,16 +13,16 @@ app.use('/api/v1/products', ProductRoutes);
 app.use('/api/v1/orders', OrderRoutes);
 
 app.get('/', (req: Request, res: Response) => {
-   res.send('Welcome to super shop');
+  res.send('Welcome to super shop');
 });
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-   res.status(404).json({
-      success: false,
-      path: req.originalUrl,
-      message: 'Route not found',
-   });
-   next();
+  res.status(404).json({
+    success: false,
+    path: req.originalUrl,
+    message: 'Route not found'
+  });
+  next();
 });
 
 export default app;

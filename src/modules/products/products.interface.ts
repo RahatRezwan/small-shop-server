@@ -1,19 +1,19 @@
 export type IVariant = {
-   type: string;
-   value: string | number;
+  type: string;
+  value: string | number;
 };
 
 export type IInventory = {
-   quantity: number;
-   inStock: boolean;
+  quantity: number;
+  inStock: boolean;
 };
 
 export type IProduct = {
-   name: string;
-   description: string;
-   price: number;
-   category: string;
-   tags: string[];
-   variants: IVariant[];
-   inventory: IInventory;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  tags: string[];
+  variants: IVariant[];
+  inventory: IInventory;
 };

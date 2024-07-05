@@ -30,16 +30,16 @@
 
 4. **Set Up Environment Variables**
 
-   -  Create a `.env` file in the root directory.
-   -  Add the following variables:
-      ```
-      NODE_ENV=development
-      PORT= Your_Port
-      DB_USERNAME=your_username
-      DB_PASSWORD=your_db_password
-      DATABASE_URL= Your_mongoose_connection_url
-      ```
-   -  You can also use `env.example` file for run this project. Just rename the file to .env
+   - Create a `.env` file in the root directory.
+   - Add the following variables:
+     ```
+     NODE_ENV=development
+     PORT= Your_Port
+     DB_USERNAME=your_username
+     DB_PASSWORD=your_db_password
+     DATABASE_URL= Your_mongoose_connection_url
+     ```
+   - You can also use `env.example` file for run this project. Just rename the file to .env
 
 5. **Run the Project**
 
@@ -83,25 +83,25 @@
 
 ```json
 {
-   "name": "Wireless Mouse",
-   "description": "Ergonomic wireless mouse with adjustable DPI settings.",
-   "price": 29.99,
-   "category": "Electronics",
-   "tags": ["computer", "peripherals", "wireless", "ergonomic"],
-   "variants": [
-      {
-         "type": "color",
-         "value": "Black"
-      },
-      {
-         "type": "color",
-         "value": "White"
-      }
-   ],
-   "inventory": {
-      "quantity": 150,
-      "inStock": true
-   }
+  "name": "Wireless Mouse",
+  "description": "Ergonomic wireless mouse with adjustable DPI settings.",
+  "price": 29.99,
+  "category": "Electronics",
+  "tags": ["computer", "peripherals", "wireless", "ergonomic"],
+  "variants": [
+    {
+      "type": "color",
+      "value": "Black"
+    },
+    {
+      "type": "color",
+      "value": "White"
+    }
+  ],
+  "inventory": {
+    "quantity": 150,
+    "inStock": true
+  }
 }
 ```
 
@@ -109,9 +109,9 @@
 
 ```json
 {
-   "email": "level2@programming-hero.com",
-   "productId": "5fd67e890b60c903cd8544a3",
-   "price": 999,
-   "quantity": 1
+  "email": "level2@programming-hero.com",
+  "productId": "5fd67e890b60c903cd8544a3",
+  "price": 999,
+  "quantity": 1
 }
 ```
