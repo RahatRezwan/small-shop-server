@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { ProductService } from './products.service';
 
 const createProduct = async (req: Request, res: Response) => {
    const product = req.body;
@@ -44,6 +45,14 @@ const getProductById = async (req: Request, res: Response) => {
    try {
       const response = await ProductService.getProductById(productId);
 
+      if (!response) {
+         return res.status(404).json({
+            success: false,
+            message: 'Product not found',
+            data: null,
+         });
+      }
+
       res.status(200).json({
          success: true,
          message: 'Product fetched successfully',
@@ -65,6 +74,14 @@ const updateProduct = async (req: Request, res: Response) => {
    try {
       const response = await ProductService.updateProduct(productId, product);
 
+      if (!response) {
+         return res.status(404).json({
+            success: false,
+            message: 'Product not found',
+            data: null,
+         });
+      }
+
       res.status(200).json({
          success: true,
          message: 'Product updated successfully',
@@ -85,10 +102,18 @@ const deleteProduct = async (req: Request, res: Response) => {
    try {
       const response = await ProductService.deleteProduct(productId);
 
+      if (!response) {
+         return res.status(404).json({
+            success: false,
+            message: 'Product not found',
+            data: null,
+         });
+      }
+
       res.status(200).json({
          success: true,
          message: 'Product deleted successfully',
-         data: response,
+         data: null,
       });
    } catch (error) {
       res.status(500).json({
