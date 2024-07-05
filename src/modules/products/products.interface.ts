@@ -1,5 +1,3 @@
-import { Model } from 'mongoose';
-
 export type IVariant = {
    type: string;
    value: string | number;
