@@ -9,7 +9,7 @@ I apologize for the oversight. Here is the correct markdown code for the README 
 
 ## Hosted API
 
-[Hosted API Link](https://your-api-link.com)
+[Hosted API Link](https://small-shop-server-psi.vercel.app/)
 
 ## Setup Instructions
 
